@@ -23,6 +23,7 @@ Then:
 The person who created this application and designed is Felix Ouma
 
 # Set Up Instruction
+To view this application, follow this link https://blog222-1.herokuapp.com/
 
 # Technologies
 * Python3.7
