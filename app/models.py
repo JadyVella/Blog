@@ -45,6 +45,23 @@ class Post(db.Model):
     users = db.relationship('User', backref = 'post',lazy = "dynamic")
     comments = db.relationship('Comment',backref = 'comments',lazy = "dynamic")
 
+    def save_post(self):
+        """
+        Save posts 
+        """
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def clear_posts(cls):
+        Pitch.all_posts.clear()
+
+    # display posts
+
+    def get_posts(cat_id):
+        posts = Post.query.filter_by(posts.id).all()
+        return posts
+
 
     def __repr__(self):
         return f'Post {self.title}'
