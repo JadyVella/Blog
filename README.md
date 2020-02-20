@@ -27,3 +27,7 @@ The person who created this application and designed is Felix Ouma
 # Technologies
 * Python3.7
 * Flask
+
+# Contact Information
+* Email: felixouma379@gmail.com
+* cell No: +254792231660
