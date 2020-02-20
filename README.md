@@ -23,3 +23,6 @@ Then:
 The person who created this application and designed is Felix Ouma
 
 # Set Up Instruction
+
+# Technologies
+* Python3.7
