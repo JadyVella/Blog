@@ -33,4 +33,6 @@ The person who created this application and designed is Felix Ouma
 * cell No: +254792231660
 * Facebook: Jady Vella
 
-
+# License & Copyright
+- Licensed under [MIT LICENCE](LICENCE)
+Copyright (c) 2020 **Felix Ouma**
