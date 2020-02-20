@@ -26,3 +26,4 @@ The person who created this application and designed is Felix Ouma
 
 # Technologies
 * Python3.7
+* Flask
