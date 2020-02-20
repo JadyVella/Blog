@@ -14,9 +14,10 @@ class User(UserMixin,db.Model):
     id = db.Column(db.Integer,primary_key = True)
     username = db.Column(db.String(255))
     email = db.Column(db.String(255),unique = True,index = True)
-    post_id = db.Column(db.Integer,db.ForeignKey('posts.id'))
-    comment_id = db.Column(db.Integer,db.ForeignKey('comments.id'))
+    user_post = db.relationship('Comment', backref = 'post', lazy = "dynamic")
     pass_secure = db.Column(db.String(255))
+    user_comment = db.relationship('Comment', backref = 'comment', lazy = 'dynamic' )
+
 
 
     @property
@@ -42,7 +43,7 @@ class Post(db.Model):
     id = db.Column(db.Integer,primary_key = True)
     title = db.Column(db.String(255))
     content = db.Column(db.String())
-    users = db.relationship('User', backref = 'post',lazy = "dynamic")
+    user_post = db.Column(db.Integer, db.ForeignKey('comments.id'))
     comments = db.relationship('Comment',backref = 'comments',lazy = "dynamic")
 
     def save_post(self):
@@ -73,8 +74,8 @@ class Comment(db.Model):
 
     id = db.Column(db.Integer,primary_key = True)
     comment = db.Column(db.String(),index=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    post_id = db.Column(db.Integer, db.ForeignKey('posts.id'))
+   
+    user_comment = db.Column(db.Integer, db.ForeignKey('users.id'))
 
 
     def save_comments(self):
