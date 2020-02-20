@@ -6,3 +6,4 @@ personal blogging website where you can create and share your opinions and other
 
 # BDD
 Given: A blog website
+When: A user signs in or signs up
