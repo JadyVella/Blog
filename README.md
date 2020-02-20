@@ -18,3 +18,6 @@ Then:
 * A writer should sign in to the blog
 * A writer should create a blog from the application
 * A writer should delete comments that he or she find insulting or degrading
+
+# Author Information
+The person who created this application and designed is Felix Ouma
